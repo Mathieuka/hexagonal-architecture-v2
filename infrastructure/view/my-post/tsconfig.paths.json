@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/domain/*": [
+        "../../../domain/*"
+      ],
+      "@/infrastructure/*": [
+        "../../../infrastructure/*"
+      ],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/msw/*": [
+        "../../../msw/*"
+      ]
+    }
+  }
+}

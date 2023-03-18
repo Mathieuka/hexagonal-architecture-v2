@@ -4,3 +4,5 @@ export type Post = {
   title: string;
   body: string;
 };
+
+export const obj = {name: "toto"}

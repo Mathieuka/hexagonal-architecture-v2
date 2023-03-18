@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
-import { Post } from "../../../../../domain/models/Post";
+import { obj, Post } from "@/domain/models/Post";
 
 export default function Home() {
+    console.log('%c LOG Post', 'background: #222; color: #bada55', obj);
   return (
     <>
       <Head>
@@ -11,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        Booom
+        NextJS App
     </>
   )
 }
