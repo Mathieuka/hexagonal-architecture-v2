@@ -1,5 +1,9 @@
+# env
+.env
+
 # modules
 node_modules
 
 # intelliJ
 .idea
+
