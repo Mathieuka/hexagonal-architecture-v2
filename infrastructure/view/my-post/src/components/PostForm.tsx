@@ -1,6 +1,6 @@
 import { Post } from "@/domain/models/Post";
 import React, { useState } from "react";
-import styles from '@/styles/Home.module.css'
+import styles from "@/styles/Home.module.css";
 
 export const PostForm = ({
   posts,
@@ -49,7 +49,7 @@ const Posts = ({
 }) => {
   return (
     <>
-      {posts?.map(({id, title, body}) => {
+      {posts?.map(({ id, title, body }) => {
         return (
           <div key={id} className={styles.card}>
             <div

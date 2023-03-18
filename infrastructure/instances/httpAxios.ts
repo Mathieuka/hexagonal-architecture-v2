@@ -3,7 +3,6 @@ import { Http } from "@domain/repositories/Http";
 
 const headers = {
   "Content-Type": "application/json",
-  "Accept-Encoding": "gzip, deflate",
 };
 
 export const httpAxios: Http = {
