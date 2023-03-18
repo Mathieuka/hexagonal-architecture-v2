@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Post } from "@/domain/models/Post";
 import { postService } from "@/domain/services/Post.services";
 import { postRepository } from "@/infrastructure/repositories/postRepository";
@@ -6,10 +6,6 @@ import { httpAxios } from "@/infrastructure/instances/httpAxios";
 
 export const usePosts = () => {
   const [posts, setPost] = useState<Post[]>([]);
-
-  useEffect(() => {
-    fetchPost();
-  }, []);
 
   const fetchPost = async () => {
     const posts = await postService(postRepository(httpAxios)).getPosts();
@@ -32,5 +28,5 @@ export const usePosts = () => {
     setPost(() => newPosts);
   };
 
-  return { posts, createPost, deletePost };
+  return { fetchPost, posts, createPost, deletePost };
 };

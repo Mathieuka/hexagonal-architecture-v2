@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { usePosts } from "@/hooks/usePosts";
 import PostsList from "./PostsList";
 
@@ -6,7 +6,11 @@ const PostsForm = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
 
-  const { posts, createPost, deletePost } = usePosts();
+  const { fetchPost, posts, createPost, deletePost } = usePosts();
+
+  useEffect(() => {
+    fetchPost();
+  }, [fetchPost]);
 
   return (
     <>
