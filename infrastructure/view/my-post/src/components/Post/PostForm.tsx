@@ -10,7 +10,8 @@ const PostsForm = () => {
 
   useEffect(() => {
     fetchPost();
-  }, [fetchPost]);
+    // @NOTE: we voluntary don't add fetchPost in the dependencies array for the demo
+  }, []);
 
   return (
     <>
