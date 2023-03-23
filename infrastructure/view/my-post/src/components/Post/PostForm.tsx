@@ -20,17 +20,22 @@ const PostsForm = () => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Enter the title"
           type="text"
+          role="input"
+          aria-label="title"
         />
         <input
           onChange={(e) => setBody(e.target.value)}
           placeholder="Enter the content"
           type="text"
+          role="input"
+          aria-label="content"
         />
       </div>
       <button
         onClick={() => createPost({ title, body })}
         style={{ margin: "10px", width: "100px" }}
         type="button"
+        aria-label="add"
       >
         Add
       </button>

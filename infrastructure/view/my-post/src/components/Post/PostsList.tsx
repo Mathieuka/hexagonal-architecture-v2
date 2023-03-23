@@ -13,7 +13,7 @@ const PostsList = ({
     <>
       {posts?.map(({ id, title, body }) => {
         return (
-          <div key={id} className={styles.card}>
+          <div data-testid="post" key={id} className={styles.card}>
             <div
               style={{
                 display: "flex",

@@ -15,11 +15,13 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/hooks/(.*)$": "<rootDir>/src/hooks/$1",
+    "^@/components/(.*)$": "<rootDir>/src/components/$1",
     "^@/domain/services/(.*)$": "<rootDir>/../../../domain/services/$1",
     "^@/infrastructure/repositories/(.*)$":
       "<rootDir>/../../../infrastructure/repositories/$1",
     "^@/infrastructure/instances/(.*)$":
       "<rootDir>/../../../infrastructure/instances/$1",
+    "^@/infrastructure/view/(.*)$": "<rootDir>../../../infrastructure/view/$1",
   },
 };
 
