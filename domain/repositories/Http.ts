@@ -1,3 +1,6 @@
+// Repositories All types and interfaces related with the repositories
+// (a repository is in charge of bringing data from a web service, or a database, or a file...).
+
 export interface Http {
   get: <T>(
     path: string,

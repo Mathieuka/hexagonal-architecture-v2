@@ -1,3 +1,6 @@
+// Instances He we have created concrete instances for our client and repositories.
+// You can see like the entry point of your system.
+
 import axios from "axios";
 import { Http } from "@domain/repositories/Http";
 

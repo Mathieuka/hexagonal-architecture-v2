@@ -1,3 +1,5 @@
+// Repositories Here we are defined the repositories we need to interact with the posts.
+
 import { Http } from "@domain/repositories/Http";
 import { PostRepository } from "@domain/repositories/Post";
 import { PostDTO } from "@infrastructure/http/dto/postDTO";
