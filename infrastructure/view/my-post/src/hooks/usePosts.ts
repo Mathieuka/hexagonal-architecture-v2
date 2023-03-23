@@ -1,30 +1,23 @@
 import { useState } from "react";
 import { Post } from "@/domain/models/Post";
-import { postService } from "@/domain/services/Post.services";
-import { postRepository } from "@/infrastructure/repositories/postRepository";
-import { httpAxios } from "@/infrastructure/instances/httpAxios";
+import { usePostRepository } from "@/hooks/usePostRepository";
 
 export const usePosts = () => {
   const [posts, setPost] = useState<Post[]>([]);
+  const postRepository = usePostRepository();
 
   const fetchPost = async () => {
-    const posts = await postService(postRepository(httpAxios)).getPosts();
+    const posts = await postRepository.getPosts();
     setPost(() => posts);
   };
 
   const deletePost = (id: number) => {
-    const newPosts = postService(postRepository(httpAxios)).deletePost(
-      id,
-      posts
-    );
+    const newPosts = postRepository.deletePost(id, posts);
     setPost(() => newPosts);
   };
 
   const createPost = (post: { title: string; body: string }) => {
-    const newPosts = postService(postRepository(httpAxios)).createPost(
-      post,
-      posts
-    );
+    const newPosts = postRepository.createPost(post, posts);
     setPost(() => newPosts);
   };
 
